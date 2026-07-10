@@ -1,0 +1,36 @@
+{
+  "name": "sales-tax-exempt-checker-skill",
+  "version": "1.0.0",
+  "description": "Verifies checkout order items to determine if they qualify for sales tax exemption (e.g. food/medical in certain states).",
+  "author": "alphaparkinc",
+  "category": "finance",
+  "tags": [
+    "tax-exemption",
+    "finance",
+    "checkout",
+    "compliance",
+    "tax"
+  ],
+  "inputs": {
+    "state_code": {
+      "type": "string",
+      "description": "2-letter US state code."
+    },
+    "product_category": {
+      "type": "string",
+      "description": "Primary catalog category."
+    }
+  },
+  "outputs": {
+    "is_exempt": {
+      "type": "boolean",
+      "description": "True if product category is exempt from sales tax in state."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Tax compliance remarks."
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
